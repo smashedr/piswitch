@@ -1,16 +1,13 @@
 #!/usr/bin/env bash
 
-set -e
+set -x
 
 if [[ $(id -u) -ne 0 ]];then
-    echo "Please run as root"
+    echo "Please run as root."
     exit 1
 fi
 
-id -u piswitch >/dev/null 2>&1
-if [[ "$?" != "0" ]];then
-    /usr/bin/env useradd piswitch
-fi
+apt install -y python3 python3-systemd python3-redis
 
 if [[ ! -d /piswitch ]];then
     mkdir -p /piswitch
@@ -29,7 +26,7 @@ if [[ ! -f /etc/systemd/system/piswitch.service ]];then
     /usr/bin/env systemctl daemon-reload
 fi
 
-/usr/bin/env systemctl is-enabled piswitch.service
+/usr/bin/env systemctl is-enabled piswitch.service >/dev/null 2>&1
 if [[ "$?" != "0" ]];then
     /usr/bin/env systemctl enable piswitch.service
 fi

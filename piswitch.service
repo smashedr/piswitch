@@ -10,8 +10,6 @@ ExecStart=/usr/bin/env python3 /piswitch/piswitch.py
 Restart=always
 TimeoutSec=10
 RestartSec=3
-User=piswitch
-Group=piswitch
 
 [Install]
 WantedBy=default.target
