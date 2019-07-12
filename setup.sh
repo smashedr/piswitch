@@ -13,6 +13,10 @@ if [[ ! -d /piswitch ]];then
     mkdir -p /piswitch
 fi
 
+if [[ ! -f /piswitch/settings.env ]];then
+    cp ./settings.env.example /piswitch/settings.env
+fi
+
 if [[ ! -f /piswitch/piswitch.py ]];then
     cp ./piswitch.py /piswitch/piswitch.py
 fi
