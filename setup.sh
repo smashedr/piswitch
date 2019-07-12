@@ -22,7 +22,7 @@ if [[ ! -f /piswitch/piswitch.py ]];then
 fi
 
 if [[ ! -f /piswitch/keyboard.py ]];then
-    cp ./piswitch.py /piswitch/keyboard.py
+    cp ./keyboard.py /piswitch/keyboard.py
 fi
 
 if [[ ! -f /etc/systemd/system/piswitch.service ]];then

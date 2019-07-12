@@ -9,7 +9,7 @@ EnvironmentFile=/piswitch/settings.env
 ExecStart=/usr/bin/env python3 /piswitch/piswitch.py
 Restart=always
 TimeoutSec=10
-RestartSec=3
+RestartSec=5
 
 [Install]
 WantedBy=default.target
