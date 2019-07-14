@@ -29,6 +29,7 @@ journalctl -fu piswitch
    1. `python3 initial_setup.py`
    1. Enable Auto-Config mode
 1. Install PiSwitch https://git.cssnr.com/shane/pi-switch
+   1. `bash setup.sh`
    1. DO NOT REBOOT
    1. `vim /piswitch/settings.env`
 1. Install pi-as-keyboard https://github.com/c4software/pi-as-keyboard
