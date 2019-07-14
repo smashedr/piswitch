@@ -1,4 +1,4 @@
-# Pi Switch
+# PiSwitch Core
 
 Automagically enter Mario Maker 2 Level ID's into the Nintendo Switch.
 
